@@ -226,7 +226,7 @@
         function showOtpModal(phone) {
             const modal = document.getElementById('otpModal');
             const desc = document.getElementById('otpDesc');
-            desc.innerHTML = `Kode verifikasi dikirim<br>(0812****${phone.substring(phone.length - 3)})`;
+            desc.innerHTML = `Kode verifikasi dikirim<br>(0812****${phone.substring(phone.length - 4)})`;
             modal.style.display = 'flex';
             startTimer();
             document.querySelectorAll('.otp-field')[0].focus();
