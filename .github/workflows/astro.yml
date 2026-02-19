@@ -88,3 +88,31 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+            - nama: Menyiapkan lingkungan Node.js
+  penggunaan: actions/setup-node@v6.2.0
+  dengan:
+    # Spesifikasi Versi yang akan digunakan. Contoh: 12.x, 10.15.1, >=10.15.0.
+    versi node: # opsional
+    # File yang berisi spesifikasi versi yang akan digunakan. Contoh: package.json, .nvmrc, .node-version, .tool-versions.
+    node-version-file: # opsional
+    # Arsitektur target yang akan digunakan Node. Contoh: x86, x64. Secara default akan menggunakan arsitektur sistem.
+    arsitektur: # opsional
+    # Atur opsi ini jika Anda ingin tindakan tersebut memeriksa versi terbaru yang tersedia yang memenuhi spesifikasi versi.
+    check-latest: # opsional
+    # Registri opsional untuk pengaturan otentikasi. Registri akan diatur dalam file .npmrc dan .yarnrc tingkat proyek, dan mengatur otentikasi untuk membaca dari env.NODE_AUTH_TOKEN.
+    URL registri: # opsional
+    # Cakupan opsional untuk otentikasi terhadap registri yang tercakup. Akan kembali ke pemilik repositori saat menggunakan registri GitHub Packages (https://npm.pkg.github.com/).
+    cakupan: # opsional
+    # Digunakan untuk mengambil distribusi node dari node-versions. Karena ada nilai default, ini biasanya tidak diberikan oleh pengguna. Saat menjalankan tindakan ini di github.com, nilai default sudah cukup. Saat dijalankan di GHES, Anda dapat memberikan token akses pribadi untuk github.com jika Anda mengalami pembatasan laju permintaan (rate limiting).
+    token: # opsional, defaultnya adalah ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Digunakan untuk menentukan pengelola paket untuk caching di direktori default. Nilai yang didukung: npm, yarn, pnpm.
+    cache: # opsional
+    # Atur ke false untuk menonaktifkan caching otomatis. Secara default, caching diaktifkan ketika devEngines.packageManager atau field packageManager tingkat atas di package.json menentukan npm sebagai pengelola paket.
+    cache pengelola paket: # opsional, defaultnya adalah true
+    # Digunakan untuk menentukan jalur ke file dependensi: package-lock.json, yarn.lock, dll. Mendukung wildcard atau daftar nama file untuk menyimpan beberapa dependensi dalam cache.
+    cache-dependency-path: # opsional
+    # Digunakan untuk menentukan mirror alternatif untuk mengunduh biner Node.js
+    cermin: # opsional
+    # Token yang digunakan sebagai header Otorisasi saat mengambil data dari mirror
+    token cermin: # opsional
+          
